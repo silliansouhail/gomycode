@@ -1,0 +1,37 @@
+ALGORITHM Word_Finder
+VAR
+    tab : ARRAY_OF STRING[3];
+    str : STRING [255];
+    c : CHAR;
+    w_cont,v_cont,j,i : INTEGER ;
+BEGIN
+    w_cont := 0;
+    v_cont := 0;
+    FOR i FROM 0 TO tab.length-1 STEP 1  DO
+        Write("Enter the sentence n°=" i+1);
+        Read(tab[i]);
+        str :=tab[i]
+        IF (str[str.length]<>".") THEN
+            Write ("your sentence need to end with a '.'");
+            IF (i<>0) THEN
+                i:=i-1
+            END_IF
+        ELSE
+            FOR j FROM 0 TO str.length-1 STEP 1  DO
+                c:=str[j];
+                SWITCH (c) DO
+                    case 1 : v_cont:=v_cont+1 IF c= "a"; BREAK;
+                    case 2 : v_cont:=v_cont+1 IF c= "e"; BREAK;
+                    case 3 : v_cont:=v_cont+1 IF c= "u"; BREAK;
+                    case 4 : v_cont:=v_cont+1 IF c= "i"; BREAK;
+                    case 5 : v_cont:=v_cont+1 IF c= "o"; BREAK;
+                    case 6 : v_cont:=v_cont+1 IF c= "y"; BREAK;
+                    case 7 : w_cont:=w_cont+1 IF c= " "; BREAK;
+                    default : ;
+                END_SWITCH
+                Write("the n° of words in the sentence "i+1 "is" w_cont)
+                Write("the n° of vowels in the sentence " i+1 "is" v_cont)
+            END_FOR
+        END_IF
+    END_FOR
+END

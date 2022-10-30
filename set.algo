@@ -1,0 +1,33 @@
+ALGORITHM sum
+VAR
+    set,set1,set2 : ARRAY_OF INTEGER [5];
+    i,j,k,l,sum,x : INTEGER;
+BEGIN
+    FOR i FROM 0 TO set1.length-1 STEP 1  DO
+        Write("enter the set1 element n°="i+1);
+        Read(set1[i]);
+    END_FOR
+    FOR j FROM 0 TO set2.length-1 STEP 1  DO
+        Write("enter the set1 element n°="j+1);
+        Read(set2[j]);
+    END_FOR
+    FOR i FROM 0 TO set.length-1 STEP 1  DO
+        x:= set1[i];
+        k:=0;
+        WHILE (k< set2.length) DO
+            IF (set[k]=x) THEN
+                BREAK
+            END_IF
+            k:=k+1;
+        END_WHILE
+        IF (k=set2.length) THEN
+            set[i]:=x;
+        END_IF
+    END_FOR
+    sum:=0;
+    FOR l FROM 0 TO set.length  STEP 1  DO
+        sum:=sum+set[l];
+    END_FOR
+    Write("Output:"sum"(distinct elements are"set ")");
+
+END
