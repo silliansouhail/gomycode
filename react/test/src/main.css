@@ -1,0 +1,13 @@
+.main{
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+
+}
+img{
+    width: 500px;
+    height: 400px;
+}
+p{
+    align-content: center;
+}
