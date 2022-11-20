@@ -1,0 +1,18 @@
+.address__card{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    border: solid 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: azure;
+}
+.card{
+    color: rgba(9, 79, 207, 0.836);
+}
+.address{
+    color: rgba(9, 79, 207, 0.836);
+}
